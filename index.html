@@ -84,12 +84,20 @@
         </div>
     </footer>
 
+    <!-- JavaScript for interactivity -->
     <script>
-        // Example JavaScript to enhance user interaction or add functionality
+        // Adds an interactive alert when a project is clicked
         document.querySelectorAll('.project').forEach(function(project) {
             project.addEventListener('click', function() {
-                alert('You clicked on a project!');
+                alert('You clicked on the project: ' + project.querySelector('h3').textContent);
             });
+        });
+
+        // Dynamically load a placeholder image if the actual image fails to load
+        document.querySelectorAll('img').forEach(function(img) {
+            img.onerror = function() {
+                this.src = 'images/placeholder.jpg';  // Placeholder image if original fails
+            };
         });
     </script>
 </body>

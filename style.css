@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition for dark mode */
 }
 
 .container {
@@ -27,12 +28,27 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+header.dark-mode {
+    background-color: #333;
+}
+
+footer.dark-mode {
+    background-color: #333;
+}
+
 /* Header Section */
 header {
-    background: #333;
+    background-color: #333;
     color: #fff;
     padding: 30px 0;
     text-align: center;
+    transition: background-color 0.3s ease;
 }
 
 header .profile-img {
@@ -52,16 +68,21 @@ header p {
 }
 
 header .contact-btn {
-    background: #007BFF;
+    background-color: #007BFF;
     color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
     text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+header .contact-btn:hover {
+    background-color: #0056b3;
 }
 
 /* About Me Section */
 .about {
-    background: #fff;
+    background-color: #fff;
     padding: 50px 0;
     text-align: center;
 }
@@ -80,7 +101,7 @@ header .contact-btn {
 
 /* Projects Section */
 .projects {
-    background: #f8f8f8;
+    background-color: #f8f8f8;
     padding: 50px 0;
 }
 
@@ -109,7 +130,7 @@ header .contact-btn {
 .project-details {
     flex: 1;
     padding: 20px;
-    background: #fff;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     max-width: 500px;
@@ -127,7 +148,7 @@ header .contact-btn {
 
 /* Footer Section */
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -146,5 +167,21 @@ footer a {
 
     .project img {
         margin-bottom: 20px;
+    }
+
+    /* Dark Mode Button Styling */
+    .dark-mode-btn {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .dark-mode-btn:hover {
+        background-color: #0056b3;
     }
 }
